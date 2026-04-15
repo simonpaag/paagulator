@@ -1,0 +1,17 @@
+{
+  "name": "PAAGulator",
+  "short_name": "PAAGulator",
+  "description": "Professional Currency Converter, Calculator, and Unit Tools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/9135/9135964.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

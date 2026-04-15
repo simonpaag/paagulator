@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Default Dark Theme */
+  --color-surface-val: #000000;
+  --color-on-surface-val: #FFFFFF;
+  --color-surface-container-low-val: #0A0A0A;
+  --color-surface-container-val: #121212;
+  --color-surface-container-high-val: #1A1A1A;
+  --color-surface-container-highest-val: #242424;
+  
+  --color-primary-val: #89ACFF;
+  --color-on-primary-val: #002B70;
+  --color-primary-dim-val: #6B8EDD;
+  
+  --color-secondary-val: #FFB74D;
+  --color-on-secondary-val: #4D2B00;
+  
+  --color-outline-val: #757575;
+  --color-outline-variant-val: #424242;
+}
+
+.light {
+  /* Light Theme */
+  --color-surface-val: #F8F9FA;
+  --color-on-surface-val: #121212;
+  --color-surface-container-low-val: #FFFFFF;
+  --color-surface-container-val: #F0F2F5;
+  --color-surface-container-high-val: #E5E7EB;
+  --color-surface-container-highest-val: #D1D5DB;
+  
+  --color-primary-val: #0047FF;
+  --color-on-primary-val: #FFFFFF;
+  --color-primary-dim-val: #003BCC;
+  
+  --color-secondary-val: #F57C00;
+  --color-on-secondary-val: #FFFFFF;
+  
+  --color-outline-val: #8E8E8E;
+  --color-outline-variant-val: #D1D5DB;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: var(--color-surface-val);
+  --color-on-surface: var(--color-on-surface-val);
+  --color-surface-container-low: var(--color-surface-container-low-val);
+  --color-surface-container: var(--color-surface-container-val);
+  --color-surface-container-high: var(--color-surface-container-high-val);
+  --color-surface-container-highest: var(--color-surface-container-highest-val);
+  
+  --color-primary: var(--color-primary-val);
+  --color-on-primary: var(--color-on-primary-val);
+  --color-primary-dim: var(--color-primary-dim-val);
+  
+  --color-secondary: var(--color-secondary-val);
+  --color-on-secondary: var(--color-on-secondary-val);
+  
+  --color-outline: var(--color-outline-val);
+  --color-outline-variant: var(--color-outline-variant-val);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased overflow-hidden;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+@layer utilities {
+  .display-amount {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-outline-variant);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-outline);
+  }
+}
